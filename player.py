@@ -27,3 +27,10 @@ class Player(Turtle):
     def go_left(self):
         self.setheading(180)
         self.forward(MOVE_DISTANCE)
+
+    def isFinish(self):
+        return self.ycor() > FINISH_LINE_Y
+
+    def go_to_start(self):
+        self.goto(STARTING_POSITION)
+
